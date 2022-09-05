@@ -2,7 +2,6 @@ export const intialState = {
   login: false,
   logout: true,
   todo: [],
-  check: true,
 };
 
 export const todontReducer = (state = intialState, action) => {
@@ -34,5 +33,5 @@ export const todontReducer = (state = intialState, action) => {
     default:
       return state;
   }
-  console.log('State State -->', state.todo)
+  console.log("State State -->", state.todo);
 };
