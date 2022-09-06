@@ -18,20 +18,23 @@ export const todontReducer = (state = intialState, action) => {
         ...state,
         todo: state.todo.filter((item) => item.name !== action.payload),
       };
-    case "LOG_IN ":
+
+    case "LOG_IN":
+      console.log("Action is Really Log IN!! ===>", action);
+
       return {
         ...state,
         login: true,
         logout: false,
       };
-    case "LOG_OUT ":
+
+    case "LOG_OUT":
       return {
         ...state,
         login: false,
-        logut: true,
+        logout: false,
       };
     default:
       return state;
   }
-  console.log("State State -->", state.todo);
 };

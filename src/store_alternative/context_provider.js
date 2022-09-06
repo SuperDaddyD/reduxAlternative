@@ -18,6 +18,9 @@ export const Provider = ({ children }) => {
     },
     removeTodo:(id)=>{
      dispatch({type:Action.REMOVE_TODO,payload:id})
+    },
+    changeLogout:()=>{
+      dispatch({type:Action.LOGOUT})
     }
   };
   return <TodoListContext.Provider value={value}>{children}</TodoListContext.Provider>;
